@@ -1,30 +1,30 @@
 #include "OperacionesAritmeticas.h"
 
-int suma (int a, int b)
+float suma (float a, float b)
 {
-  int  resultado;
+  float  resultado;
  resultado  = a + b;
 
  return resultado;
 }
 
-int resta (int a, int b)
+float resta (float a, float b)
 {
-  int  resultado;
+ float resultado;
  resultado  = a - b;
 
  return resultado;
 }
 
-int multiplicacion (int a, int b)
+float multiplicacion (float a, float b)
 {
-  int  resultado;
+  float  resultado;
  resultado  = a * b;
 
  return resultado;
 }
 
-float division (int a, int b)
+float division (float a, float b)
 {
   float  resultado;
  resultado  =  (float)a / b;
@@ -37,7 +37,7 @@ int resultado=1;
 int i;
 
 
-for (i=a;i!=0;i--)
+for (i=(int)a;i!=0;i--)
     {
     resultado= resultado * i;
     }

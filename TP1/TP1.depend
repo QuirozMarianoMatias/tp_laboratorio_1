@@ -9,14 +9,15 @@
 	<stdio.h>
 	"OperacionesAritmeticas.h"
 
-1566959621 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\main.c
+1567040762 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\main.c
 	<stdio.h>
+	<stdlib.h>
 	"OperacionesAritmeticas.h"
 
-1566959621 c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.h
+1567040652 c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.h
 	<stdio.h>
 
-1567009253 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.c
+1567040652 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.c
 	"OperacionesAritmeticas.h"
 
 1567028269 source:c:\users\quiroz family\desktop\tp_laboratorio_1\tp1\main.c
