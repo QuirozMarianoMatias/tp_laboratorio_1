@@ -1,6 +1,6 @@
 #include <stdio.h>
-float suma(float,float);
-float resta (float,float);
-float multiplicacion (float,float);
-float division (float,float);
+int suma(int,int);
+int resta (int,int);
+int multiplicacion (int,int);
+float division (int,int);
 int factorial(int);
