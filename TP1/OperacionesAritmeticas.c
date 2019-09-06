@@ -59,23 +59,27 @@ float division (int a, int b)
 
  return resultado;
 }
-/** \brief Esta funcion saca factorial de un entero y devuelve el resultado de dicha factorial
+
+/** \brief Esta funcion saca factorial de un entero y devuelve el resultado de dicho factorial
+ *
  * \param int a recibe un entero
- * \param
  * \return int devuelve un entero
  *
  */
-int factorial (int a)
+int factorial(int a)
 {
-int resultado=1;
-int i;
 
+   int resultado;
 
-for (i=(int)a;i!=0;i--)
+    if (a == 0)
     {
-    resultado= resultado * i;
+        resultado = 1;
     }
 
-return (resultado);
+    else
+    {
+        resultado = a* factorial(a-1);
+    }
+    return resultado;
 }
 

@@ -45,30 +45,24 @@ int main()
                 printf("la multiplicacion de: %d * %d es: %.2f\n",numero1,numero2,total);
                 break;
             case 'e':
-                if (numero1 >0)
+                if (numero1 >=0)
                     {
                     total = factorial(numero1);
                     printf("el factorial de: %d es: %.2f \n",numero1,total);
-
                     }
-                else if (numero1==0)
-                    {printf("el factorial de: 0 es: 1\n");
 
-                    }
-                else
+                    else
                     {printf("no se puede sacar factorial de: %d porque es un numero negativo\n",numero1);
 
                     }
-                    if (numero2 >0)
+
+                    if (numero2 >=0)
                     {
                     total = factorial(numero2);
                     printf("el factorial de: %d es: %.2f \n",numero2,total);
 
                     }
-                 else if (numero2==0)
-                    {printf("el factorial de: 0 es: 1\n");
 
-                    }
                 else
                     {printf("no se puede sacar factorial de: %d porque es un numero negativo\n",numero2);
 
@@ -84,9 +78,6 @@ int main()
         }
     system("pause");
     system("cls");
-    printf("si desea salir presione:(s)\n");
-    fflush(stdin);
-    scanf("%c", &opcion);
     }
     while(opcion!='s');
 return 0;
