@@ -30,19 +30,26 @@ int buscarLibre( Employee empleados [], int t)
 
 }
 
-
-
+int generadorID(Employee empleados[], int t)
 {
- return -1;
+    int i;
+    int id =1;
+
+    for(i=0; i<t; i++)
+    {
+        if(empleados[i].isEmpty ==VACIO)
+        {
+            id = id+i;
+            break;
+        }
+    }
+    return id;
 }
 
 
 
 
-
-
-
-iint addEmployee(Employee empleados [], int t, int id, char name[],char lastName[],float salary,int sector)
+int addEmployee(Employee empleados [], int t, int id, char name[],char lastName[],float salary,int sector)
 
 {
 
@@ -55,9 +62,13 @@ iint addEmployee(Employee empleados [], int t, int id, char name[],char lastName
  {
     if(indice!=ERROR)
     {
-        empleados [indice] = cargarEmplado();
-        empleados [indice].id = indice+1;
 
+        empleados [indice].id = id;
+        empleados [indice].salary = salary;
+        empleados [indice].sector = sector;
+        empleados [indice].isEmpty =OCUPADO;
+        strcpy(empleados[indice].name,name);
+        strcpy(empleados[indice].lastName,lastName);
 
 
 
@@ -83,10 +94,11 @@ int findEmployeeById(Employee empleado[], int t,int id)
 
     {
 
-        if (id == empleado[i].id)
+        if (id == empleado[i].id && empleado[i].isEmpty == OCUPADO)
 
         {
-            idEncontrado = empleado[i].id;
+            idEncontrado = i;
+            break;
         }
     }
 
@@ -100,17 +112,73 @@ int findEmployeeById(Employee empleado[], int t,int id)
 int removeEmployee(Employee empleado [], int t,int id)
 
 {
-    int estado = ERROR;
+    int estado = -1;
+    int index;
 
-    empleado.id = findEmployeeById(empleado,t,id);
+    index = findEmployeeById(empleado,t,id);
 
-   if (empleado.id =! ERROR)
+   if (index != -1)
    {
 
-       empleado[id].isEmpty= VACIO;
+       empleado[index].isEmpty = VACIO;
        estado = OCUPADO;
    }
 
 
     return estado;
 }
+void mostrarEmpleado (Employee empleado [],int t)
+{
+    int i;
+
+    for (i=0;i<t;i++)
+        {
+            if (empleado[i].isEmpty == OCUPADO)
+            {
+
+
+            printf("%d %s %s %f %d\n",empleado[i].id,empleado[i].name,empleado[i].lastName,empleado[i].salary,empleado[i].sector);
+            }
+        }
+}
+
+int modificarEmployee(Employee empleado [], int t,int id)
+
+{
+    int estado = -1;
+    int index;
+    int Nsector;
+    char Nname[30];
+    char NlastName[30];
+    float Nsalary;
+
+    index = findEmployeeById(empleado,t,id);
+
+   if (index != -1)
+   {
+
+        printf("Ingrese nuevo sector: ");
+        scanf("%d", &Nsector);
+        printf("Ingrese nuevo nombre: ");
+        fflush(stdin);
+        gets(Nname);
+        printf("Ingrese nuevo apellido: ");
+        fflush(stdin);
+        gets(NlastName);
+        printf("Ingrese nuevo salario: ");
+        scanf("%f", &Nsalary);
+
+        empleado[index].sector = Nsector;
+        empleado[index].salary = Nsalary;
+        strcpy(empleado[index].name,Nname);
+        strcpy(empleado[index].lastName,NlastName);
+
+
+
+   }
+
+
+    return estado;
+}
+
+

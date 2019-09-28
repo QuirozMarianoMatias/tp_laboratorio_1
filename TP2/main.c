@@ -6,6 +6,14 @@ int main()
     Employee empleados[T];
     int opcion;
     int estado;
+    int id;
+    int sector;
+    char name[30];
+    char lastName[30];
+    float salary;
+    int baja;
+    int quePaso;
+    int modificar;
 
   estado = initEmployees(empleados,T);
 
@@ -23,28 +31,37 @@ int main()
         {
         case 1 :
         printf("Ingrese sector: ");
-        scanf("%d", &empleados.sector);
+        scanf("%d", &sector);
         printf("Ingrese nombre: ");
         fflush(stdin);
-        scanf("%[^\n]", empleados.name);
+        gets(name);
         printf("Ingrese apellido: ");
         fflush(stdin);
-        scanf("%[^\n]", empleados.lastName);
+        gets(lastName);
         printf("Ingrese su salario: ");
-        scanf("%f", &empleados.salary);
+        scanf("%f", &salary);
+        id = generadorID(empleados,T);
+        estado = addEmployee(empleados,T,id,name,lastName,salary,sector);
 
         break;
 
         case 2 :
-        printf("usted esta modificando!!!");
-        break;
+
+            printf("ingrese id que desea Modificar: ");
+            scanf("%d",&modificar);
+            quePaso =  modificarEmployee(empleados,T,modificar);
+
+            break;
 
         case 3 :
-        printf("usted esta dando de baja!!!");
+            printf("ingrese id que desea dar de baja: ");
+            scanf("%d",&baja);
+            quePaso =  removeEmployee(empleados,T,baja);
+
         break;
 
         case 4 :
-        mostrarUnEmpleado(empleados[0]);
+        mostrarEmpleado(empleados,T);
         break;
         case 5 :
         printf("usted salio!!!");

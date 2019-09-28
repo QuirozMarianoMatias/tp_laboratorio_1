@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1568825921 source:c:\users\quiroz family\desktop\tp2\funciones.c
+1569628315 source:c:\users\quiroz family\desktop\tp2\funciones.c
 	"funciones.h"
 
-1568771487 c:\users\quiroz family\desktop\tp2\funciones.h
+1569628402 c:\users\quiroz family\desktop\tp2\funciones.h
 	<stdio.h>
+	<string.h>
 
-1568825829 source:c:\users\quiroz family\desktop\tp2\main.c
+1569628417 source:c:\users\quiroz family\desktop\tp2\main.c
 	<stdlib.h>
 	"funciones.h"
 

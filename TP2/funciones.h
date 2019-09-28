@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #define VACIO 0
 #define OCUPADO 1
 #define ERROR -1
@@ -15,8 +16,12 @@ typedef struct
 }Employee;
 
 int initEmployees(Employee empleados [], int t);
-int addEmployee(Employee empleados [], int t);
-Employee cargarEmplado(void);
+int addEmployee(Employee empleados [], int t, int id, char name[],char lastName[],float salary,int sector);
 int buscarLibre( Employee empleados [], int t);
+int generadorID(Employee empleados[], int t);
+void mostrarEmpleado (Employee empleado [],int t);
+int removeEmployee(Employee empleado [], int t,int id);
+int modificarEmployee(Employee empleado [], int t,int id);
+
 
 
