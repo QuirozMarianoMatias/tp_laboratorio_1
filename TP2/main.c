@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "funciones.h"
-#define T 5
+#define T 1000
 int main()
 {
     Employee empleados[T];
@@ -61,6 +61,8 @@ int main()
         break;
 
         case 4 :
+        mostrarEmpleado(empleados,T);
+        quePaso = sortStudentsByNameAndAverage(empleados,T);
         mostrarEmpleado(empleados,T);
         break;
         case 5 :

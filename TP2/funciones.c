@@ -130,16 +130,28 @@ int removeEmployee(Employee empleado [], int t,int id)
 void mostrarEmpleado (Employee empleado [],int t)
 {
     int i;
+    float total;
+    float pro;
+    int super;
 
+    total = salaryTotal(empleado,t);
+    pro = promedio(empleado,t);
+    super = superiorPromedio(empleado,t);
+
+
+            printf("Id\tName\tLast Name\tSalary\tSector\n");
     for (i=0;i<t;i++)
         {
             if (empleado[i].isEmpty == OCUPADO)
             {
 
-
-            printf("%d %s %s %f %d\n",empleado[i].id,empleado[i].name,empleado[i].lastName,empleado[i].salary,empleado[i].sector);
+            printf("%d\t%s\t%s\t%14.2f\t%2d\n",empleado[i].id,empleado[i].name,empleado[i].lastName,empleado[i].salary,empleado[i].sector);
             }
         }
+
+        printf("\n %f\n",total);
+        printf("\n %f\n",pro);
+        printf("\n %d\n",super);
 }
 
 int modificarEmployee(Employee empleado [], int t,int id)
@@ -182,3 +194,102 @@ int modificarEmployee(Employee empleado [], int t,int id)
 }
 
 
+int sortStudentsByNameAndAverage(Employee empleados[], int t)
+{
+    int i;
+    int j;
+    int estado = -1;
+    Employee auxempleado;
+
+    for(i=0; i<t-1; i++)
+    {
+        for(j=i+1; j<t; j++)
+        {
+            if(strcmp(empleados[i].lastName,empleados[j].lastName)>0)
+            {
+                auxempleado = empleados[i];
+                empleados[i] = empleados[j];
+                empleados[j] = auxempleado;
+            }
+
+            else
+            {
+                if(strcmp(empleados[i].lastName,empleados[j].lastName)==0)
+                {
+                    if(empleados[i].sector>empleados[j].sector)
+                    {
+                        auxempleado = empleados[i];
+                        empleados[i] = empleados[j];
+                        empleados[j] = auxempleado;
+                    }
+                }
+            }
+        }
+
+    }
+    return estado;
+}
+
+float salaryTotal (Employee empleados [], int t)
+
+{
+
+    int i;
+    float total=0;
+
+    for (i=0;i<t;i++)
+    {
+
+        if (empleados[i].isEmpty == OCUPADO)
+        {
+            total += empleados[i].salary;
+
+
+        }
+    }
+    return total;
+}
+
+float promedio (Employee empleados [], int t)
+
+{
+    int i;
+    int cont=0;
+    float total;
+    float prom;
+
+    total = salaryTotal(empleados,t);
+
+     for (i=0;i<t;i++)
+    {
+
+        if (empleados[i].isEmpty == OCUPADO)
+        {
+            cont++;
+        }
+    }
+
+    prom = total / cont;
+
+    return prom;
+}
+
+
+int superiorPromedio (Employee empleados [], int t)
+{
+    float prom;
+    int i;
+    int cont=0;
+
+    prom = promedio(empleados,t);
+
+    for (i=0;i<t;i++)
+    {
+        if (empleados[i].salary > prom && empleados[i].isEmpty == OCUPADO)
+        {
+            cont++;
+        }
+    }
+
+    return cont;
+}

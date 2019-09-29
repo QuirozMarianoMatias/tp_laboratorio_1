@@ -22,6 +22,10 @@ int generadorID(Employee empleados[], int t);
 void mostrarEmpleado (Employee empleado [],int t);
 int removeEmployee(Employee empleado [], int t,int id);
 int modificarEmployee(Employee empleado [], int t,int id);
+int sortStudentsByNameAndAverage(Employee empleados[], int t);
+float salaryTotal (Employee empleados [], int t);
+float promedio (Employee empleados [], int t);
+int superiorPromedio (Employee empleados [], int t);
 
 
 
