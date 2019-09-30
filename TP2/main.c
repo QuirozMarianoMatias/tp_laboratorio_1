@@ -12,10 +12,9 @@ int main()
     char lastName[30];
     float salary;
     int baja;
-    int quePaso;
     int modificar;
 
-  estado = initEmployees(empleados,T);
+  initEmployees(empleados,T);
 
 
 
@@ -30,15 +29,15 @@ int main()
    switch(opcion)
         {
         case 1 :
-        printf("Ingrese sector: ");
+        printf("Ingrese sector: \n");
         scanf("%d", &sector);
-        printf("Ingrese nombre: ");
+        printf("Ingrese nombre: \n");
         fflush(stdin);
         gets(name);
-        printf("Ingrese apellido: ");
+        printf("Ingrese apellido: \n");
         fflush(stdin);
         gets(lastName);
-        printf("Ingrese su salario: ");
+        printf("Ingrese su salario: \n");
         scanf("%f", &salary);
         id = generadorID(empleados,T);
         estado = addEmployee(empleados,T,id,name,lastName,salary,sector);
@@ -46,37 +45,58 @@ int main()
         break;
 
         case 2 :
-
-            printf("ingrese id que desea Modificar: ");
+            if (estado== 0)
+            {printf("ingrese id que desea Modificar: \n");
             scanf("%d",&modificar);
-            quePaso =  modificarEmployee(empleados,T,modificar);
+            modificarEmployee(empleados,T,modificar);
+            }
+
+              else
+            {
+                printf("usted no ingreso ningun usuario\n");
+            }
 
             break;
 
         case 3 :
-            printf("ingrese id que desea dar de baja: ");
+            if (estado == 0)
+            {printf("ingrese id que desea dar de baja: \n");
             scanf("%d",&baja);
-            quePaso =  removeEmployee(empleados,T,baja);
-
+            removeEmployee(empleados,T,baja);
+            }
+             else
+            {
+                printf("usted no ingreso ningun usuario\n");
+            }
         break;
 
         case 4 :
-        mostrarEmpleado(empleados,T);
-        quePaso = sortStudentsByNameAndAverage(empleados,T);
-        mostrarEmpleado(empleados,T);
+            if (estado == 0)
+        {   sortStudentsByNameAndAverage(empleados,T);
+            printEmployees (empleados,T);
+            mostrarSalaryPromedioSuperiorPromedio(empleados,T);
+        }
+
+        else
+            {
+                printf("usted no ingreso ningun usuario\n");
+            }
         break;
+
+
         case 5 :
-        printf("usted salio!!!");
+        printf("usted salio!!!\n");
         break;
 
 
         default :
-        printf("Opcion incorrecta!!!");
+        printf("Opcion incorrecta!!!\n");
 
 
         }
 
-
+    system("pause");
+    system("cls");
    }while (opcion != 5);
 
 
