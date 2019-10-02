@@ -35,14 +35,15 @@ int buscarLibre( Employee empleados [], int t)
 int generadorID(Employee empleados[], int t)
 {
     int i;
-    int id =1;
+    int id;
 
     for(i=0; i<t; i++)
     {
         if(empleados[i].isEmpty ==  0)
         {
-            id = id+i;
+            id = i+1;
             break;
+
         }
     }
     return id;
@@ -135,7 +136,7 @@ int mostrarSalaryPromedioSuperiorPromedio (Employee empleado [],int t)
     float total;
     float pro;
     int super;
-    int estado=-1;
+    int estado=0;
 
     total = salaryTotal(empleado,t);
     pro = promedio(empleado,t);
