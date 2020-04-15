@@ -1,33 +1,11 @@
 # depslib dependency file v1.0
-1566958441 source:c:\users\quiroz family\desktop\tp1\operacionesaritmeticas.c
+1586320722 source:c:\users\quiroz family\desktop\tp maty\tp1\operacionesaritmeticas.c
 	"OperacionesAritmeticas.h"
 
-1566959041 c:\users\quiroz family\desktop\tp1\operacionesaritmeticas.h
-	<stdio.h>
+1586910592 c:\users\quiroz family\desktop\tp maty\tp1\operacionesaritmeticas.h
 
-1566959031 source:c:\users\quiroz family\desktop\tp1\main.c
-	<stdio.h>
-	"OperacionesAritmeticas.h"
-
-1567699250 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\main.c
+1586916260 source:c:\users\quiroz family\desktop\tp maty\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
-	"OperacionesAritmeticas.h"
-
-1567694585 c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.h
-	<stdio.h>
-
-1567735805 source:c:\users\quiroz family\desktop\tp_laboratorio_1-master\tp1\operacionesaritmeticas.c
-	"OperacionesAritmeticas.h"
-
-1567028269 source:c:\users\quiroz family\desktop\tp_laboratorio_1\tp1\main.c
-	<stdio.h>
-	<stdlib.h>
-	"OperacionesAritmeticas.h"
-
-1567011871 c:\users\quiroz family\desktop\tp_laboratorio_1\tp1\operacionesaritmeticas.h
-	<stdio.h>
-
-1567018502 source:c:\users\quiroz family\desktop\tp_laboratorio_1\tp1\operacionesaritmeticas.c
 	"OperacionesAritmeticas.h"
 
