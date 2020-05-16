@@ -32,25 +32,6 @@ int buscarLibre( Employee empleados [], int t)
 
 }
 
-int generadorID(Employee empleados[], int t)
-{
-    int i;
-    int id;
-
-    for(i=0; i<t; i++)
-    {
-        if(empleados[i].isEmpty ==  0)
-        {
-            id = i+1;
-            break;
-
-        }
-    }
-    return id;
-}
-
-
-
 
 int addEmployee(Employee empleados [], int t, int id, char name[],char lastName[],float salary,int sector)
 
@@ -60,6 +41,7 @@ int addEmployee(Employee empleados [], int t, int id, char name[],char lastName[
     int indice;
     int estado= -1;
     indice = buscarLibre(empleados, t);
+
 
  for (i=0;i<t;i++)
  {
@@ -78,6 +60,8 @@ int addEmployee(Employee empleados [], int t, int id, char name[],char lastName[
         estado=0;
         break;
     }
+
+
  }
 
 
@@ -159,31 +143,44 @@ int modificarEmployee(Employee empleado [], int t,int id)
 {
     int estado = -1;
     int index;
-    int Nsector;
-    char Nname[30];
-    char NlastName[30];
-    float Nsalary;
+    int auxSector;
+    char auxName[30];
+    char auxLastName[30];
+    float auxSalary;
+    int opcion;
 
     index = findEmployeeById(empleado,t,id);
 
    if (index != -1)
    {
+       printf("1-modificar sector\n2-modificar nombre\n3-modificar apellido\n4-modificar salario");
+       scanf("%d",&opcion);
+        switch(opcion)
+        {
 
-        printf("Ingrese nuevo sector: ");
-        scanf("%d", &Nsector);
-        printf("Ingrese nuevo nombre: ");
-        fflush(stdin);
-        gets(Nname);
-        printf("Ingrese nuevo apellido: ");
-        fflush(stdin);
-        gets(NlastName);
-        printf("Ingrese nuevo salario: ");
-        scanf("%f", &Nsalary);
 
-        empleado[index].sector = Nsector;
-        empleado[index].salary = Nsalary;
-        strcpy(empleado[index].name,Nname);
-        strcpy(empleado[index].lastName,NlastName);
+        case 1:
+        getInt("Ingrese nuevo sector: ","error\n",1,3,10,&auxSector);
+        empleado[index].sector = auxSector;
+        break;
+        case 2:
+        getName("Ingrese nuevo nombre: ","error\n",4,20,10,auxName);
+        strcpy(empleado[index].name,auxName);
+        break;
+        case 3:
+        getName("Ingrese nuevo apellido: ","error\n",4,20,10,auxLastName);
+        strcpy(empleado[index].lastName,auxLastName);
+        break;
+        case 4:
+        getFloat("Ingrese nuevo salario: ","error\n",0,50000,10,&auxSalary);
+        empleado[index].salary = auxSalary;
+        break;
+        default:
+            printf("opcion incorrecta sera devuelto al menu principal");
+
+
+
+        }
 
         estado = 0;
 

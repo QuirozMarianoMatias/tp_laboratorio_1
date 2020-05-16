@@ -10,3 +10,23 @@
 	<stdlib.h>
 	"funciones.h"
 
+1589591489 source:c:\users\quiroz family\desktop\maty lab1\tp_laboratorio_1-master\tp2\main.c
+	<stdlib.h>
+	"funciones.h"
+
+1589588969 c:\users\quiroz family\desktop\maty lab1\tp_laboratorio_1-master\tp2\funciones.h
+	<stdio.h>
+	<string.h>
+	"input.h"
+
+1589591854 source:c:\users\quiroz family\desktop\maty lab1\tp_laboratorio_1-master\tp2\funciones.c
+	"funciones.h"
+
+1589592192 c:\users\quiroz family\desktop\maty lab1\tp_laboratorio_1-master\tp2\input.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1589591489 source:c:\users\quiroz family\desktop\maty lab1\tp_laboratorio_1-master\tp2\input.c
+	"input.h"
+
