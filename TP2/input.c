@@ -96,7 +96,7 @@ int getInt (char* msg,char* msgError,int minSize,int maxSize,int reintentos,int*
                 }
                 else
                 {
-                    printf("%s 2",msgError);
+                    printf("%s",msgError);
                     reintentos--;
                 }
             }
@@ -143,7 +143,7 @@ int getFloat(char* msg, char* msgError, int minSize, int maxSize, int reintentos
                 }
                 else
                 {
-                    printf("%s 2",msgError);
+                    printf("%s",msgError);
                     reintentos--;
                 }
             }
