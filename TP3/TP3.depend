@@ -209,37 +209,47 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1591880700 source:c:\users\quiroz family\desktop\tp3\controller.c
+1592097681 source:c:\users\quiroz family\desktop\tp3\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
+	"input.h"
 
 1590767427 c:\users\quiroz family\desktop\tp3\linkedlist.h
 
-1592019792 c:\users\quiroz family\desktop\tp3\employee.h
+1592097650 c:\users\quiroz family\desktop\tp3\employee.h
 
-1561499216 c:\users\quiroz family\desktop\tp3\parser.h
+1592094346 c:\users\quiroz family\desktop\tp3\parser.h
 
-1592020420 source:c:\users\quiroz family\desktop\tp3\employee.c
+1592097675 source:c:\users\quiroz family\desktop\tp3\employee.c
 	<stdlib.h>
 	"Employee.h"
 	<string.h>
 
-1592020420 source:c:\users\quiroz family\desktop\tp3\main.c
+1592097667 source:c:\users\quiroz family\desktop\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
+	"input.h"
 	"Employee.h"
 
-1561499216 c:\users\quiroz family\desktop\tp3\controller.h
+1592097650 c:\users\quiroz family\desktop\tp3\controller.h
 
-1592020334 source:c:\users\quiroz family\desktop\tp3\parser.c
+1592097697 source:c:\users\quiroz family\desktop\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+
+1589981061 source:c:\users\quiroz family\desktop\tp3\input.c
+	"input.h"
+
+1590060539 c:\users\quiroz family\desktop\tp3\input.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
 

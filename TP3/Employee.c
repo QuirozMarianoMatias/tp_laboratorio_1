@@ -10,6 +10,17 @@ Employee* employee_new()
     return pEmployee;
 
 }
+
+void employee_delete(Employee * This)
+{
+
+    if (This != NULL)
+    {
+        free(This);
+    }
+
+}
+
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldoStr)
 {
     Employee * auxEmployee;
@@ -141,7 +152,7 @@ return retorno;
 }
 
 
-int employee_CompareByString(void * e1, void * e2)
+int employee_CompareByName(void * e1, void * e2)
 {
 
     int retorno;
@@ -165,7 +176,7 @@ int employee_CompareByString(void * e1, void * e2)
     return retorno;
 }
 
-int employee_CompareByInt(void * e1, void * e2)
+int employee_CompareById(void * e1, void * e2)
 {
         int retorno;
         int auxA;
@@ -176,6 +187,76 @@ int employee_CompareByInt(void * e1, void * e2)
 
         employee_getId(e1,&auxA);
         employee_getId(e2,&auxB);
+
+        if(auxA > auxB)
+        {
+            retorno = 1;
+        }
+        else if(auxA == auxB)
+        {
+            retorno = 0;
+        }
+        else
+        {
+            retorno = -1;
+        }
+
+
+
+    }
+
+
+
+
+    return retorno;
+}
+
+int employee_CompareByHorasTrabajadas(void * e1, void * e2)
+{
+        int retorno;
+        int auxA;
+        int auxB;
+
+    if((e1 != NULL)&&(e2 !=NULL))
+    {
+
+        employee_getHorasTrabajadas(e1,&auxA);
+        employee_getHorasTrabajadas(e2,&auxB);
+
+        if(auxA > auxB)
+        {
+            retorno = 1;
+        }
+        else if(auxA == auxB)
+        {
+            retorno = 0;
+        }
+        else
+        {
+            retorno = -1;
+        }
+
+
+
+    }
+
+
+
+
+    return retorno;
+}
+
+int employee_CompareBySueldo(void * e1, void * e2)
+{
+        int retorno;
+        int auxA;
+        int auxB;
+
+    if((e1 != NULL)&&(e2 !=NULL))
+    {
+
+        employee_getSueldo(e1,&auxA);
+        employee_getSueldo(e2,&auxB);
 
         if(auxA > auxB)
         {
